@@ -7,17 +7,17 @@
     <title>OCS Lunch Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </head>
 
 <body>
-    <h1 id="title">OCS Lunch Survey</h1>
-    <p id="description">Help us fine tune our lunch program</p>
-
+    
     <form id="survey-form" name="surveyForm">
+            <h1 id="title">OCS Lunch Survey</h1>
+             <p id="description">Help us fine tune our lunch program</p>
         <div>
             <label for="dropdown">Select: </label>
-            <select id="dropdown" name="user_type">
+            <select id="dropdown" name="user_type" required>
                 <option disabled selected></option>
                 <option>Parent</option>
                 <option>Student</option>
@@ -25,14 +25,14 @@
             </select>
         </div>
 
-        <div>
+        <div> <!-- Needs to be required to pass tests-->
             <label id="name-label" for="name">Name: </label>
-            <input type="text" id="name" name="user_name" placeholder="optional" required>
+            <input type="text" id="name" name="user_name" placeholder="optional">
         </div>
 
-        <div>
+        <div> <!-- Needs to be required to pass tests-->
             <label id="email-label" for="email">Email: </label>
-            <input type="email" id="email" name="user_email" placeholder="optional" required>
+            <input type="email" id="email" name="user_email" placeholder="optional">
         </div>
 
         <div>
@@ -51,7 +51,8 @@
 
         <!-- Javascript has a limiter function. However, I need to use disable/class thing instead of 'alert' -->
         <fieldset>
-            <legend>From this list, please circle your top three favorite menu items so far:</legend>
+        <legend>From this list, please check your top three favorite menu items so far:</legend>
+            <p id="favorites">
             
             <input type="checkbox" name="favorite" id="macAndTrees" value="macAndTrees">
             <label for="macAndTrees">Mac and Trees</label>
@@ -85,10 +86,11 @@
 
             <input type="checkbox" name="favorite" id="mexicaliLasagna" value="mexicaliLasagna">
             <label for="mexicaliLasagna">Mexicali Lasagna</label>
-        </fieldset>
+        </p>
+    </fieldset>
 
         <div>
-            <p>Have you been enjoying <em>World Wide Wednesday</em>
+            <p>Have you been enjoying <em>World Wide Wednesday</em>?
             <input type="radio" id="worldWideWednesday-yes" name="worldWideWednesday" value="worldWideWednesday-yes">
             <label for="worldWideWednesday-yes">Yes</label>
             <input type="radio" id="worldWideWednesday-no" name="worldWideWednesday" value="worldWideWednesday-no">
