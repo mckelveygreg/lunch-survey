@@ -1,18 +1,20 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>OCS Lunch Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
+
 <body>
     <h1 id="title">OCS Lunch Survey</h1>
     <p id="description">Help us fine tune our lunch program</p>
 
-    <form id="survey-form">
+    <form id="survey-form" name="surveyForm">
         <div>
             <label for="dropdown">Select: </label>
             <select id="dropdown" name="user_type">
@@ -22,28 +24,110 @@
                 <option>Teacher</option>
             </select>
         </div>
-        
+
         <div>
             <label id="name-label" for="name">Name: </label>
-            <input type="text" id="name" name="user_name" placeholder="Roger Worley"> 
+            <input type="text" id="name" name="user_name" placeholder="optional" required>
         </div>
 
         <div>
             <label id="email-label" for="email">Email: </label>
-            <input type="email" id="email" name="user_email" placeholder="roger@oics.org">
+            <input type="email" id="email" name="user_email" placeholder="optional" required>
         </div>
 
         <div>
             <label id="number-label" for="number">How many meals a week do you purchase: </label>
             <input type="number" id="number" name="perWeek" min="0" max="5" placeholder="5">
         </div>
-       
+
+        <fieldset>
+            <legend>Are you enjoying the new school lunch program?</legend>
+            <input type="radio" id="enjoy-yes" name="enjoy" value="enjoy-yes">
+            <label for="enjoy-yes">Yes</label>
+            <input type="radio" id="enjoy-no" name="enjoy" value="enjoy-no">
+            <label for="enjoy-no">No</label>
+            <textarea name="enjoy"></textarea>
+        </fieldset>
+
+        <!-- Javascript has a limiter function. However, I need to use disable/class thing instead of 'alert' -->
+        <fieldset>
+            <legend>From this list, please circle your top three favorite menu items so far:</legend>
+            
+            <input type="checkbox" name="favorite" id="macAndTrees" value="macAndTrees">
+            <label for="macAndTrees">Mac and Trees</label>
+
+            <input type="checkbox" name="favorite" id="pizza" value="pizza">
+            <label for="pizza">Pizza</label>
+
+            <input type="checkbox" name="favorite" id="haystacks" value="haystacks">
+            <label for="haystacks">Haystacks</label>
+
+            <input type="checkbox" name="favorite" id="sloppyLentilJoes" value="sloppyLentilJoes">
+            <label for="sloppyLentilJoes">Sloppy Lentil Joes</label>
+
+            <input type="checkbox" name="favorite" id="spaghetti" value="spaghetti">
+            <label for="spaghetti">Spaghetti with marinara</label>
+
+            <input type="checkbox" name="favorite" id="orzo" value="orzo">
+            <label for="orzo">Orzo with Peas</label>
+
+            <input type="checkbox" name="favorite" id="bakedPotatoes" value="bakedPotatoes">
+            <label for="bakedPotatoes">Baked Potatoes</label>
+
+            <input type="checkbox" name="favorite" id="veggieWrap" value="veggieWrap">
+            <label for="veggieWrap">Veggie Wrap</label>
+
+            <input type="checkbox" name="favorite" id="stirFry" value="stirFry">
+            <label for="stirFry">Vegetable Stir-fry</label>
+
+            <input type="checkbox" name="favorite" id="soupGrilledCheese" value="soupGrilledCheese">
+            <label for="soupGrilledCheese">Tomato Soup/Toasted Cheese Sandwich</label>
+
+            <input type="checkbox" name="favorite" id="mexicaliLasagna" value="mexicaliLasagna">
+            <label for="mexicaliLasagna">Mexicali Lasagna</label>
+        </fieldset>
+
         <div>
-            <p>Do you like milk?</p>
-            <input type="radio" id="milk-yes" name="milk" value="milk-yes">
-            <label for="milk-yes">Yes</label>
-            <input type="radio" id="milk" name="milk" value="no">
+            <p>Have you been enjoying <em>World Wide Wednesday</em>
+            <input type="radio" id="worldWideWednesday-yes" name="worldWideWednesday" value="worldWideWednesday-yes">
+            <label for="worldWideWednesday-yes">Yes</label>
+            <input type="radio" id="worldWideWednesday-no" name="worldWideWednesday" value="worldWideWednesday-no">
+            <label for="worldWideWednesday-no">No</label>
+            </p>
         </div>
+
+        <div>
+            <p>Do you like milk?
+                <input type="radio" id="milk-yes" name="milk" value="milk-yes">
+                <label for="milk-yes">Yes</label>
+                <input type="radio" id="milk-no" name="milk" value="no">
+                <label for="milk-no">No</label>
+            </p>
+        </div>
+
+        <div>
+            <p>Do you understand <em>offer</em> versus <em>serve</em>?
+                <input type="radio" id="offerServe-yes" name="offerServe" value="offerServe-yes">
+                <label for="offerServe-yes">Yes</label>
+                <input type="radio" id="offerServe-no" name="offerServe" value="offerServe-no">
+                <label for="offerServe-no">No</label>
+            </p>
+        </div>
+
+        <div>
+            <label for="lunchMenu">What would you like to see on our lunch menu?</label>
+            <textarea id="lunchMenu"></textarea>
+        </div>
+
+        <div>
+            <label for="experience">How would you improve the menu or lunch room experience?</label>
+            <textarea id="experience"></textarea>
+        </div>
+
+        <button type="submit" id="submit">Submit</button>
     </form>
+    <script src="main.js"></script>
+
 </body>
+
 </html>
