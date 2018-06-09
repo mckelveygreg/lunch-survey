@@ -1,7 +1,53 @@
 input:invalid {
     border: 2px dashed red;
 }
-
+button, input, select, textarea {
+    font-family : inherit;
+    font-size   : 80%;
+  }
 textarea {
     display: block;
+    width: 100%;
+    resize: none;
+}
+
+body {
+    background: linear-gradient(#AAA, #444)
+}
+
+#title, #description {
+    text-align: center;
+}
+
+#survey-form {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(29, 250, 21, 0.541) ;
+    margin: auto;
+    margin-top: 25px;
+    max-width: 475px;
+    padding: 2em;
+    padding-top: 5px;
+    border: 3px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#favorites {
+    display: grid;
+    grid-template: auto / repeat(3, 1.2em auto);
+    grid-row-gap: 1.4em;
+
+}
+
+@media (max-width: 415px ) {
+ 
+    #favorites {
+        grid-template: auto / repeat(2, 1.2em auto);
+        grid-gap: .5em;
+        font-size: 70%;
+    }
+    button, input, select, textarea {
+        font-family : inherit;
+        font-size   : 70%;
+      }
 }
