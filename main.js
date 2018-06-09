@@ -1,5 +1,5 @@
 
-
+// function source: https://www.roytuts.com/limit-number-of-checkbox-selections-using-javascript/
 function checkBoxLimit() {
     var checkBoxGroup = document.forms.surveyForm.favorite;
     var limit = 3;
